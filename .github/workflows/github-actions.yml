@@ -20,3 +20,6 @@ jobs:
         with:
           # The lane that should be executed.
           lane: 'beta'
+          options: '{"option1":"value1"}'
+
+          
