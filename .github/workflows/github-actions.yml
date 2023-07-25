@@ -23,3 +23,4 @@ jobs:
           options: '{"option1":"value1"}'
 
           
+fastlane beta option1:value1
