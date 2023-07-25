@@ -1,0 +1,7 @@
+fastlane_version '2.157'
+default_platform :ios
+
+platform :ios do
+
+
+end
