@@ -12,15 +12,26 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-      
-      - name: Fastlane Action
-
-        uses: maierj/fastlane-action@v3.0.0
-        with:
-          # The lane that should be executed.
-          lane: 'beta'
-          options: '{"option1":"value1"}'
-
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Archive file
+        run:  |
+          sudo apt-get update
+          sudo apt-get install zip
+          zip -r archive.zip *
           
-fastlane beta option1:value1
+      - name: Upload to drive
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: ${{ secrets.credentials }}
+          filename: "archive.zip"
+          folderId: ${{ secrets.folderId }}
+      - name: Make Directory Structure
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: ${{ secrets.DRIVE_CREDENTIALS }}
+          filename: w/x/y/z
+          folderId: ${{ secrets.folderId }}
+          overwrite: "true"
+          mirrorDirectoryStructure: "true"
