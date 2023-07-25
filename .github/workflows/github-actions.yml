@@ -23,7 +23,7 @@ jobs:
           bundler-cache: true
 
       - name: Install Bundler
-        run: gen install bundler
+        run: gem install bundler
 
       - name: Install gem
         run: bundler install
