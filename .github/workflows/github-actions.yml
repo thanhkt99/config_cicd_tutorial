@@ -15,7 +15,7 @@ jobs:
 
       - uses: maxim-lobanov/setup-xcode@v1
         with: 
-          xcode-version: lastest-stable
+          xcode-version: '13.2'
       
       - uses: ruby/setup-ruby@v1
 
