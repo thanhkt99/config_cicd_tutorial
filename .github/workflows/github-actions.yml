@@ -20,3 +20,4 @@ jobs:
         with:
           # The lane that should be executed.
           - lane: 'beta'
+          - subdirectory: 'ios'
