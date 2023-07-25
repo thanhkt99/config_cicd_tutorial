@@ -19,6 +19,7 @@ jobs:
       
       - uses: ruby/setup-ruby@v1
         with:
+          uby-version: '3.0'
           bundler-cache: true
 
       - name: Install Bundler
