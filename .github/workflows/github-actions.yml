@@ -27,7 +27,7 @@ jobs:
       - name: Upload to drive
         uses: adityak74/google-drive-upload-git-action@main
         with:
-          credentials: "service_account.json"
+          credentials: "epreapp-93cd9ec6519f.json"
           filename: "text.docx"
           folderId: 1u_tTU_1XEWrUgWf2MA-8cuL0c4tszguq
       - name: Make Directory Structure
