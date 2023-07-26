@@ -29,12 +29,12 @@ jobs:
         with:
           credentials: "epreapp-93cd9ec6519f.json"
           filename: "text.docx"
-          folderId: 1u_tTU_1XEWrUgWf2MA-8cuL0c4tszguq
+          folderId: ${{ secrets.folderId }}
       - name: Make Directory Structure
         uses: adityak74/google-drive-upload-git-action@main
         with:
           credentials: ${{ secrets.DRIVE_CREDENTIALS }}
           filename: w/x/y/z
-          folderId: 1u_tTU_1XEWrUgWf2MA-8cuL0c4tszguq
+          folderId: ${{ secrets.folderId }}
           overwrite: "true"
           mirrorDirectoryStructure: "true"
